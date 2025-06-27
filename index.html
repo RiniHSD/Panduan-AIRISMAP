@@ -31,7 +31,7 @@
             padding: 25px 20px;
             text-align: center;
         }
-        h1 {
+        h2 {
             font-size: 1.8rem;
             margin-bottom: 10px;
         }
@@ -149,7 +149,7 @@
             header {
                 padding: 20px 15px;
             }
-            h1 {
+            h2 {
                 font-size: 1.5rem;
             }
             .download-btn, .nav-btn {
@@ -165,7 +165,7 @@
         }
         
         @media (max-width: 480px) {
-            h1 {
+            h2 {
                 font-size: 1.3rem;
             }
             .download-btn, .nav-btn {
@@ -183,7 +183,7 @@
 <body>
     <div class="container">
         <header>
-            <h1>Panduan Lengkap Aplikasi AIRISMAP</h1>
+            <h2>Panduan Lengkap Aplikasi AIRISMAP</h2>
             <p>Petunjuk penggunaan aplikasi pemetaan irigasi</p>
         </header>
         
@@ -195,7 +195,6 @@
         </div>
         
         <div class="guide-container">
-            <h2 class="guide-title">Panduan Visual Aplikasi</h2>
             <div class="guide-image-container">
                 <!-- Halaman panduan sebagai gambar -->
                 <img src="https://via.placeholder.com/800x1130/ffffff/0daaf0?text=Halaman+1" alt="Halaman Panduan 1" class="guide-image" id="guide-image">
@@ -211,7 +210,7 @@
             </div>
             
             <div class="page-indicator">
-                Halaman: <span id="current-page">1</span> dari <span id="total-pages">5</span>
+                Halaman: <span id="current-page">1</span> dari <span id="total-pages">19</span>
             </div>
         </div>
         
@@ -224,11 +223,25 @@
     <script>
         // Data gambar panduan
         const guidePages = [
-            "https://project-gis-rini.vercel.app/images/22.png",
-            "https://project-gis-rini.vercel.app/images/22.png",
-            "https://project-gis-rini.vercel.app/images/22.png",
-            "https://project-gis-rini.vercel.app/images/22.png",
-            "https://project-gis-rini.vercel.app/images/22.png"
+            "https://panduan-airismap.vercel.app/images/1.png",
+            "https://panduan-airismap.vercel.app/images/2.png",
+            "https://panduan-airismap.vercel.app/images/3.png",
+            "https://panduan-airismap.vercel.app/images/4.png",
+            "https://panduan-airismap.vercel.app/images/5.png",
+            "https://panduan-airismap.vercel.app/images/6.png",
+            "https://panduan-airismap.vercel.app/images/7.png",
+            "https://panduan-airismap.vercel.app/images/8.png",
+            "https://panduan-airismap.vercel.app/images/9.png",
+            "https://panduan-airismap.vercel.app/images/10.png",
+            "https://panduan-airismap.vercel.app/images/11.png",
+            "https://panduan-airismap.vercel.app/images/12.png",
+            "https://panduan-airismap.vercel.app/images/13.png",
+            "https://panduan-airismap.vercel.app/images/14.png",
+            "https://panduan-airismap.vercel.app/images/15.png",
+            "https://panduan-airismap.vercel.app/images/16.png",
+            "https://panduan-airismap.vercel.app/images/17.png",
+            "https://panduan-airismap.vercel.app/images/18.png",
+            "https://panduan-airismap.vercel.app/images/19.png"
         ];
         
         // Elemen DOM
