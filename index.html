@@ -97,7 +97,7 @@
             background: #0daaf0;
             color: white;
             border: none;
-            padding: 12px 25px;
+            padding: 12px 15px;
             border-radius: 50px;
             font-weight: 600;
             cursor: pointer;
@@ -105,6 +105,7 @@
             display: flex;
             align-items: center;
             box-shadow: 0 4px 10px rgba(13, 170, 240, 0.3);
+            flex-shrink: 1;
         }
         .nav-btn:hover {
             background: #0b8fd1;
@@ -141,7 +142,7 @@
             text-decoration: none;
         }
         
-        /* Mobile optimization */
+        /* Perbaikan khusus untuk tampilan mobile */
         @media (max-width: 768px) {
             body {
                 padding: 10px;
@@ -149,33 +150,66 @@
             header {
                 padding: 20px 15px;
             }
-            h2 {
+            h1 {
                 font-size: 1.5rem;
             }
-            .download-btn, .nav-btn {
+            .download-btn {
                 padding: 10px 20px;
                 font-size: 0.9rem;
             }
             .guide-container {
                 padding: 15px;
             }
+            
+            /* Penyesuaian tombol navigasi untuk mobile */
+            .nav-btn {
+                padding: 10px 15px; /* Lebih kecil */
+                font-size: 0.85rem; /* Ukuran font lebih kecil */
+                min-width: 120px; /* Lebar minimum untuk memastikan keseragaman */
+            }
             .navigation {
-                gap: 10px;
+                gap: 10px; /* Jarak lebih kecil antar tombol */
+            }
+            
+            /* Sembunyikan teks pada tombol jika diperlukan */
+            .nav-btn span:not(.nav-icon) {
+                display: inline-block; /* Pastikan teks tetap tampil */
             }
         }
         
         @media (max-width: 480px) {
-            h2 {
+            h1 {
                 font-size: 1.3rem;
             }
-            .download-btn, .nav-btn {
-                width: 100%;
-                padding: 12px;
+            .download-btn {
+                padding: 10px 15px;
+                font-size: 0.85rem;
+            }
+            
+            /* Penyesuaian lebih lanjut untuk mobile kecil */
+            .nav-btn {
+                padding: 8px 12px; /* Lebih kecil lagi */
+                font-size: 0.8rem; /* Ukuran font lebih kecil */
+                min-width: 110px; /* Lebar minimum yang lebih kecil */
             }
             .navigation {
+                gap: 8px; /* Jarak lebih kecil antar tombol */
+            }
+            
+            .page-input-container {
                 flex-direction: column;
-                align-items: center;
-                gap: 10px;
+            }
+        }
+        
+        /* Untuk layar yang sangat kecil */
+        @media (max-width: 350px) {
+            .nav-btn {
+                padding: 8px 10px; /* Sangat kecil */
+                font-size: 0.75rem; /* Ukuran font sangat kecil */
+                min-width: 100px; /* Lebar minimum minimal */
+            }
+            .nav-icon {
+                margin-right: 4px; /* Jarak ikon lebih kecil */
             }
         }
     </style>
@@ -205,7 +239,7 @@
                     <span class="nav-icon">◀</span> Sebelumnya
                 </button>
                 <button class="nav-btn" id="next-btn">
-                    Selanjutnya <span class="nav-icon">▶</span>
+                    Selanjutnya <span class="nav-icon"> ▶</span>
                 </button>
             </div>
             
@@ -215,7 +249,8 @@
         </div>
         
         <div class="footer">
-            <p>© 2025 AIRISMAP - Aplikasi Pemetaan Irigasi. Hak Cipta Dilindungi.</p>
+            <p>© 2025 AIRISMAP - Aplikasi Pemetaan Irigasi</p>
+            <p>Hak Cipta Dilindungi.</p>
             <p>Dikembangkan oleh <a href="https://rini-husadiyah-portfolio.vercel.app/" target="_blank">Rini Husadiyah</a></p>
         </div>
     </div>
